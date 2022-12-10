@@ -1,4 +1,5 @@
-const a = [5794,
+const a = [
+    5794,
     5879,
     4899,
     6777,
@@ -2245,21 +2246,26 @@ const a = [5794,
     6422,
     2010,
     2244,
-    8805];
+    8805
+];
 
 const length = a.length;
-let max = 0;
+let max = [];
 let sum = 0;
 // let cnt = 0;
-for (let i = 0; i < length; i++) {
+for (let i = 0; i <= length; i++) {
     if (!a[i]) {
         // console.log(cnt++, '<->', sum, '<-*->', max, '\n');
-        if (max < sum) {
-            max = sum;
-        }
+        max.push(sum);
         sum = 0;
     } else {
         sum = sum + a[i];
     }
 }
-console.log('Answer => ', max);
+
+max.sort(function(a, b){return b - a});
+let fsum = 0;
+for (let i = 0; i < 3; i++) {
+    fsum = fsum + max[i];
+}
+console.log('Answer => ', fsum);
