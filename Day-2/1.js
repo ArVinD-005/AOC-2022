@@ -17,7 +17,7 @@ for (let i = 0; i < length; i++) {
     const elf = draws[key1];
     const you = draws[key2];
 
-    console.log(sum, '/n');
+    // console.log(sum, '\n');
     // wining.
     if (elf < you) {
         sum = sum + you + 6;
