@@ -18,15 +18,15 @@ for (let i = 0; i < length; i++) {
     const you = draws[key2];
 
     console.log(sum, '/n');
-    // wining
+    // wining.
     if (elf < you) {
         sum = sum + you + 6;
     }
-    // loose
+    // loose.
     if (elf > you) {
         sum = sum + you;
     }
-    // draw
+    // draw.
     if (elf === you) {
         sum = sum + you + 3;
     }
